@@ -1,0 +1,3 @@
+[submodule "babag-api"]
+	path = babag-api
+	url = git@github.com:/statoilfuelretail/babag-api

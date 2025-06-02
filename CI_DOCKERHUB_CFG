@@ -1,0 +1,12 @@
+# Used by CI server (Jenkins) to determine 
+# what tag should be used for docker image
+
+docker_repo="statoilfuelretail"
+docker_img="babag-api-mock"
+
+version="$(head -n 1 project.clj | cut -d' ' -f 3 | tr -d '\"')"
+
+export DOCKER_TAG="${docker_repo}/${docker_img}:${version}"
+
+echo "Resolved version='$version', DOCKER_TAG='$DOCKER_TAG'"
+
